@@ -1,8 +1,37 @@
 <?php 
-    $idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
-    //choisir une bdd parmi les bdd du serveur de bdd
-    mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
-    var_dump($idCon);
+//var_dump($_POST);
+//var_dump(isset($_POST)); // verifier que la variable est defini
+
+if(!empty($_POST)){
+    
+    
+
+$idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
+//choisir une bdd parmi les bdd du serveur de bdd
+mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
+
+
+//request insertion client entreprise
+$requeste2 = 
+"  INSERT INTO client_entreprise VALUES
+(    NULL,
+    '{$_POST['nom']}',
+    '{$_POST['registre']}',
+    '{$_POST['ninea']}'
+)";
+var_dump($_POST);
+
+//excecusion de la requette dans la base
+mysqli_query($idCon, $requeste2) or die("erreur requete: ".mysqli_error($idCon));
+$msg = "<h3 style='color: '>Enregistrement reussi</h3>";
+echo $msg;
+header('location: client.php?succes=ok');
+
+} else {
+
+
+  
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +59,16 @@
     </nav>
 
     <article>
+    <?php 
+    if(isset($_GET['succes']) && $_GET['succes']=='ok'){
+        $msg = "<h3 style='color: '>Enregistrement reussi</h3>";
+        echo $msg;
+    }
+
+
+    ?>
         <div class="form_choixTypeClient">
-        <form class="hidden1"  action="client.php" method = "post" >
+        <form class="hidden1"  action="client.php" method="post" enctype="multipart/form-data" >
             <h4>Selectionnez le Type de client</h4>
            <h4> <input type="radio" name="typeClient" value="Particulier" id="Particulier" class="typeClient"/> Client Particulier <br></h4>
            <h4><input type="radio" name="typeClient" value="Entreprise" id="Entreprise" class="typeClient"/> Client Entreprise <br> </h4>
@@ -71,7 +108,7 @@
                 </div>
                 <input type="submit" class="button_valider" value="Creer le compte">
         </form>
-        <form action="client.php" method = "post" name="form3" class="Entreprise hidden ClientEntreprise">
+        <form action="client.php" method="post" enctype="multipart/form-data" name="form3" class="Entreprise hidden ClientEntreprise">
             <h3>Formulaire Ajout Client Entreprise</h3>
                     <input type="text" name="nom"  placeholder="Nom Entreprise"> <br>
                     <input type="number" name="registre" placeholder="Registre de commerce"> <br>
@@ -88,3 +125,6 @@
     <script type="text/javascript" src="client.js"></script>
 </body>
 </html>
+<?php
+  }
+ ?>

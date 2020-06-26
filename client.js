@@ -39,7 +39,7 @@ for (i = 0; i < radios.length; i++) {
 /*verification input entreprise */
 document.forms['form3'].addEventListener('submit', function(e)
 {
-    e.preventDefault();
+    
     var erreur;
     /* selectionner et parcourir input*/
     var inputs = document.querySelectorAll('.ClientEntreprise input ');
@@ -62,9 +62,9 @@ document.forms['form3'].addEventListener('submit', function(e)
         /* apres soumission on vide les inputs*/
         var inputs = document.querySelectorAll('.ClientEntreprise input');
         console.log(inputs);
-        for (i=0;i < inputs.length; i++){
+        /*for (i=0;i < inputs.length; i++){
             inputs[i].value = "";
-        }
+        }*/
 
      }
      
@@ -72,7 +72,7 @@ document.forms['form3'].addEventListener('submit', function(e)
 /*verification input formulaires client particulier*/
 document.forms['form2'].addEventListener('submit', function(e)
 {
-    e.preventDefault();
+    
     
     var erreur;
     /*recuperer le radio choisi*/
