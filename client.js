@@ -36,7 +36,6 @@ for (i = 0; i < radios.length; i++) {
 }
 
 
-
 /*verification input entreprise */
 document.forms['form3'].addEventListener('submit', function(e)
 {
@@ -70,8 +69,6 @@ document.forms['form3'].addEventListener('submit', function(e)
      }
      
 });
-
-
 /*verification input formulaires client particulier*/
 document.forms['form2'].addEventListener('submit', function(e)
 {

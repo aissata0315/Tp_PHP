@@ -18,17 +18,33 @@
 
  // Pour selectionner le type de compte(courant, bloqué, epargne)
 
-var radios = document.querySelectorAll('.typeCompte');
+var radios = document.querySelectorAll('.Particulier .typeCompte');
 for (i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', function () {
         var id = this.getAttribute('id');
-        var divTypeCompte = document.querySelector('.' + id);
+        var divTypeCompte = document.querySelector('.Particulier .' + id);
         console.log(divTypeCompte);
         var champsCompteCourant = document.querySelector('.compte_courant');
         champsCompteCourant.style.display = 'none';
         var champsCompteEpargne = document.querySelector('.compte_epargne');
         champsCompteEpargne.style.display = 'none';
         var champsCompteBloque = document.querySelector('.compte_bloque');
+        champsCompteBloque.style.display = 'none';
+        divTypeCompte.style.display = 'block';
+       
+    });
+}
+var radios = document.querySelectorAll('.Entreprise .typeCompte');
+for (i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click', function () {
+        var id = this.getAttribute('id');
+        var divTypeCompte = document.querySelector('.Entreprise .' + id);
+        console.log(divTypeCompte);
+        var champsCompteCourant = document.querySelector('.compte_courant2');
+        champsCompteCourant.style.display = 'none';
+        var champsCompteEpargne = document.querySelector('.compte_epargne2');
+        champsCompteEpargne.style.display = 'none';
+        var champsCompteBloque = document.querySelector('.compte_bloque2');
         champsCompteBloque.style.display = 'none';
         divTypeCompte.style.display = 'block';
        
@@ -53,7 +69,7 @@ document.forms['form2'].addEventListener('submit', function(e)
 
     }
     /* recuperer les inputs correspondant aux type de compte choisi*/
-    var inputs = document.querySelectorAll('.'+typeCompteSelectionnee+' input, .input_commun input');
+    var inputs = document.querySelectorAll('.Particulier .'+typeCompteSelectionnee+' input, .Particulier .input_commun input');
     console.log(inputs);
     for (i=0;i < inputs.length; i++){
         if (!inputs[i].value){
@@ -88,14 +104,27 @@ document.forms['form2'].addEventListener('submit', function(e)
 document.forms['form3'].addEventListener('submit', function(e)
 {
     e.preventDefault();
+    
     var erreur;
-    /* selectionner et parcourir input*/
-    var inputs = document.querySelectorAll('.ClientEntreprise input ');
+    /*recuperer le radio choisi*/
+    var choix = document.querySelectorAll('.typeCompte');
+    var typeCompteSelectionnee;
+    for (i=0; i< choix.length; i++){
+        if ( choix[i].checked == true)
+        {
+             typeCompteSelectionnee = choix[i].getAttribute('id');
+            break;
+        }
+
+    }
+    /* recuperer les inputs correspondant aux type de compte choisi*/
+    var inputs = document.querySelectorAll('.Entreprise .'+typeCompteSelectionnee+' input, .Entreprise .input_commun input');
     console.log(inputs);
     for (i=0;i < inputs.length; i++){
         if (!inputs[i].value){
             erreur = 'Veuillez renseigez tous les champs!';
             break;
+    
 
         }
     }

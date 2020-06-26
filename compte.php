@@ -25,7 +25,7 @@
 
     <article>
         <div class="form_choixTypeClient">
-        <form class="hidden1" >
+        <form class="hidden1"  action="">
             <h4>Creer un compte pour:</h4>
            <h4> <input type="radio" name="typeClient" value="Particulier" id="Particulier" class="typeClient"/> Client Particulier <br></h4>
            <h4><input type="radio" name="typeClient" value="Entreprise" id="Entreprise" class="typeClient"/> Client Entreprise <br> </h4>
@@ -34,9 +34,9 @@
         <form id="form2" class="Particulier hidden clientParticulier">
             <h3>Type de compte</h3>
                 <div class="radios">
-                    <input type="radio" name="typeCompte" value="Compte Courant" id="compte_courant" class="typeCompte"/> Compte Courant <br>
-                    <input type="radio" name="typeCompte" value="Compte Epargne" id="compte_epargne" class="typeCompte"/>  Compte Epargne <br>
-                    <input type="radio" name="typeCompte" value="Compte Bloque" id="compte_bloque" class="typeCompte"/> Compte Bloque<br>
+                    <input type="radio" name="typeCompte" value="Compte Courant" id="compte_courant2" class="typeCompte"/> Compte Courant <br>
+                    <input type="radio" name="typeCompte" value="Compte Epargne" id="compte_epargne2" class="typeCompte"/>  Compte Epargne <br>
+                    <input type="radio" name="typeCompte" value="Compte Bloque" id="compte_bloque2" class="typeCompte"/> Compte Bloque<br>
                 </div>
                 <div class="input_commun ">
                     <input type="text" name="" placeholder="Numero du compte"> <br>
@@ -48,14 +48,14 @@
                         <option value="002154897">002154897</option>
                         </select>
                 </div>
-                <div class="hidden compte_courant">
+                <div class="hidden compte_courant2">
                     <input type="number" name="" placeholder="Agios"> <br> 
                 </div>
-                <div class="hidden compte_bloque">
+                <div class="hidden compte_bloque2">
                     <input type="number" name="" placeholder="Frais d'Ouverture"> <br>
                     <input type="date" name="" placeholder="Date de fin blocage"><br>
                 </div>
-                <div class="hidden compte_epargne">
+                <div class="hidden compte_epargne2">
                     <input type="number" name="" placeholder="Frais d'Ouverture"> <br>
                     <label for="etat">Choix Etat Compte</label>
                         <select name="etat" id="etat">
