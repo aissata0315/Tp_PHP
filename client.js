@@ -5,6 +5,7 @@
         for (i = 0; i < radios1.length; i++){
         radios1[i].addEventListener('click',function(){
          var id = this.getAttribute('id');
+         console.log(id);
          var formTypeClient = document.querySelector('.'+ id);
          var hiddens = document.querySelectorAll('.hidden');
          for (i = 0; i < hiddens.length; i++) {
@@ -27,6 +28,7 @@ for (i = 0; i < radios.length; i++) {
         console.log(id);
         var divTypeClient= document.querySelector('.' + id);
         var champsClientSalarier= document.querySelector('.salarier');
+        console.log(champsClientSalarier);
         champsClientSalarier.style.display = 'none';
         var champsClientnonsalarier = document.querySelector('.non_salarier');
         champsClientnonsalarier.style.display = 'none';
@@ -106,9 +108,9 @@ if (erreur) {
     /* apres soumission on vide les inputs*/
     var inputs = document.querySelectorAll('.'+typeClientSelectionnee+' input');
     console.log(inputs);
-    for (i=0;i < inputs.length; i++){
+    /*for (i=0;i < inputs.length; i++){
         inputs[i].value = "";
-    }
+    }*/
 
  }
 } );
