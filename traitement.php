@@ -9,7 +9,7 @@ if(!empty($_POST['form3'])){
     
     
     //request insertion client entreprise
-    $requeste2 = 
+    $requete2 = 
     "  INSERT INTO client_entreprise VALUES
     (    NULL,
         '{$_POST['nom']}',
@@ -19,10 +19,10 @@ if(!empty($_POST['form3'])){
     var_dump($_POST);
     
     //excecusion de la requette dans la base
-    mysqli_query($idCon, $requeste2) or die("erreur requete: ".mysqli_error($idCon));
+    mysqli_query($idCon, $requete2) or die("erreur requete: ".mysqli_error($idCon));
     $msg = "<h3 style='color: '>Enregistrement reussi</h3>";
     echo $msg;
-    //header('location: client.php?succes=ok');
+    header('location: client.php?succes=ok');
 }
 
 if(!empty($_POST['form2'])){  
@@ -33,7 +33,7 @@ if(!empty($_POST['form2'])){
     
     
     //request insertion client physique
-    $requeste3 = 
+    $requete3 = 
     "  INSERT INTO client_physique VALUES
     (  
         NULL,
@@ -49,12 +49,13 @@ if(!empty($_POST['form2'])){
         '{$_POST['raisonSocial']}'
         
     )";
-    var_dump($_POST);
+    var_dump($_POST) ; 
     
     //excecusion de la requette dans la base
-    mysqli_query($idCon, $requeste3) or die("erreur requete: ".mysqli_error($idCon));
+    mysqli_query($idCon, $requete3) or die("erreur requete: ".mysqli_error($idCon));
     $msg = "<h3 style='color: '>Enregistrement reussi</h3>";
     echo $msg;
 
 }
 ?>
+

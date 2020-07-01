@@ -1,4 +1,3 @@
-
     // Pour selectionner le type de client(particulier ou entreprise)
 
     var radios1 = document.querySelectorAll('.typeClient');
@@ -24,11 +23,11 @@ for (i = 0; i < radios.length; i++) {
         var id = this.getAttribute('id');
         var divTypeCompte = document.querySelector('.Particulier .' + id);
         console.log(divTypeCompte);
-        var champsCompteCourant = document.querySelector('.compte_courant');
+        var champsCompteCourant = document.querySelector('.compte_courant2');
         champsCompteCourant.style.display = 'none';
-        var champsCompteEpargne = document.querySelector('.compte_epargne');
+        var champsCompteEpargne = document.querySelector('.compte_epargne2');
         champsCompteEpargne.style.display = 'none';
-        var champsCompteBloque = document.querySelector('.compte_bloque');
+        var champsCompteBloque = document.querySelector('.compte_bloque2');
         champsCompteBloque.style.display = 'none';
         divTypeCompte.style.display = 'block';
        
@@ -40,11 +39,11 @@ for (i = 0; i < radios.length; i++) {
         var id = this.getAttribute('id');
         var divTypeCompte = document.querySelector('.Entreprise .' + id);
         console.log(divTypeCompte);
-        var champsCompteCourant = document.querySelector('.compte_courant2');
+        var champsCompteCourant = document.querySelector('.compte_courant');
         champsCompteCourant.style.display = 'none';
-        var champsCompteEpargne = document.querySelector('.compte_epargne2');
+        var champsCompteEpargne = document.querySelector('.compte_epargne');
         champsCompteEpargne.style.display = 'none';
-        var champsCompteBloque = document.querySelector('.compte_bloque2');
+        var champsCompteBloque = document.querySelector('.compte_bloque');
         champsCompteBloque.style.display = 'none';
         divTypeCompte.style.display = 'block';
        
@@ -54,7 +53,7 @@ for (i = 0; i < radios.length; i++) {
 
 document.forms['form2'].addEventListener('submit', function(e)
 {
-    e.preventDefault();
+    
     
     var erreur;
     /*recuperer le radio choisi*/
@@ -89,9 +88,9 @@ document.forms['form2'].addEventListener('submit', function(e)
         alert('Compte creer!');
         /* on vide les inputs apres soumission*/
         var inputs = document.querySelectorAll('.'+typeCompteSelectionnee+' input, .input_commun input');
-        for (i=0;i < inputs.length; i++){
+        /*for (i=0;i < inputs.length; i++){
             inputs[i].value = "";
-        }
+        }*/
 
      }
 });
@@ -103,7 +102,7 @@ document.forms['form2'].addEventListener('submit', function(e)
 /*verification input entreprise */
 document.forms['form3'].addEventListener('submit', function(e)
 {
-    e.preventDefault();
+
     
     var erreur;
     /*recuperer le radio choisi*/
@@ -139,9 +138,9 @@ document.forms['form3'].addEventListener('submit', function(e)
         /* apres soumission on vide les inputs*/
         var inputs = document.querySelectorAll('.ClientEntreprise input');
         console.log(inputs);
-        for (i=0;i < inputs.length; i++){
+       /* for (i=0;i < inputs.length; i++){
             inputs[i].value = "";
-        }
+        }*/
 
      }
      
@@ -213,13 +212,9 @@ function verifCNI(champ)
 
 // choix chekhbox avec jquery 
 /*$(document).ready(function(){
-
     $('.typeCompte').click(function() {
         var id = $(this).attr('id');
         $('.hidden').hide();
         $('.' + id).show();
     });
-
 });*/
-
-

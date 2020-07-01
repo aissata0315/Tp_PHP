@@ -5,6 +5,9 @@
   $query = "SELECT id_client from client_physique";
   $resultat= mysqli_query($idCon, $query) or die("erreur requete: ".mysqli_error($idCon));
   //var_dump($resultat);
+  $query2 = "SELECT id_entreprise from client_entreprise";
+  $resultat2= mysqli_query($idCon, $query2) or die("erreur requete: ".mysqli_error($idCon));
+  //var_dump($resultat2);
   
 ?>
 
@@ -82,7 +85,7 @@
                 
                 <input type="submit" name="form2" class="button_valider" value="Creer le compte">
         </form>
-        <form name="form3" class="Entreprise hidden ClientEntreprise">
+        <form name="form3" action="creerCompte.php" method="post" class="Entreprise hidden ClientEntreprise">
             <h3>Type de compte</h3>
                 <div class="radios">
                     <input type="radio" name="typeCompte" value="Compte Courant" id="compte_courant" class="typeCompte"/> Compte Courant <br>
@@ -90,31 +93,30 @@
                     <input type="radio" name="typeCompte" value="Compte Bloque" id="compte_bloque" class="typeCompte"/> Compte Bloque<br>
                 </div>
                 <div class="input_commun ">
-                    <input type="text" name="" placeholder="Numero du compte"> <br>
- 
-                    <label for="etat">Selectionnez l'id du proprietaire du compte:</label>
+                    <input type="text" name="numeroCompte" placeholder="Numero du compte"> <br>
+                    <label for="id_entreprise">Selectionnez l'id du proprietaire du compte:</label>
                         <select name="id_entreprise" id="id_entreprise">
-                        <option value=" "> id_entreprise</option>
-                        <option value="001245875">001245875</option>
-                        <option value="0012458454">0012458454</option>
-                        <option value="002154897">002154897</option>
-                        </select>
+                        <?php
+			                while ($options2 = mysqli_fetch_assoc($resultat2))
+			                {   
+                                
+		                ?>
+			                <option name="id_entreprise" value="<?php  echo $options2['id_entreprise']  ?>"> <?php  echo $options2['id_entreprise']  ?></option>
+		                <?php 
+		                 }
+		                ?>
+                        </select> <br>
+                <label for="dateOuverture">Date d'Ouverture</label>
+                <input type="date" name="dateOuverture" placeholder="Date Ouverture"><br>
                 </div>
                 <div class="hidden compte_courant">
-                    <input type="number" name="" placeholder="Agios"> <br> 
+                
                 </div>
                 <div class="hidden compte_bloque">
-                    <input type="number" name="" placeholder="Frais d'Ouverture"> <br>
-                    <input type="date" name="" placeholder="Date de fin blocage"><br>
+                <label for="dateFin">Date fin du blocage</label>
+                    <input type="date" name="dateFin" value="1001-01-01" placeholder="Date de fin blocage"><br>
                 </div>
                 <div class="hidden compte_epargne">
-                    <input type="number" name="" placeholder="Frais d'Ouverture"> <br>
-                    <label for="etat">Choix Etat Compte</label>
-                        <select name="etat" id="etat">
-                        <option value="Etat Compte"> Etat Compte</option>
-                        <option value="Actif">Actif</option>
-                        <option value="Bloque">Bloqué</option>
-                        </select>
                 </div>
                 <input type="submit" class="button_valider" value="Creer le compte">
         </form>

@@ -29,8 +29,6 @@
         $msg = "<h3 style='color: '>Enregistrement reussi</h3>";
         echo $msg;
     }
-
-
     ?>
         <div class="form_choixTypeClient">
         <form class="hidden1"  action="traitement.php" method="post" enctype="multipart/form-data" >
@@ -61,11 +59,11 @@
                     <input type="text" name="adresse" placeholder="Adresse"> <br>
                     <input type="email" name="email" placeholder="Email" onblur="verifMail(this)"> <br>
                     <input type="number" name="telephone" placeholder="Telephone" onblur="verifTEL"> <br>
-                    <input type="number" name="salaire" placeholder="Salaire"> <br>
-                    <input type="text" name="profession" placeholder="Profession"> <br>
+                    <input type="number" value="0" name="salaire" placeholder="Salaire"> <br>
+                    <input type="text" value="0" name="profession" placeholder="Profession"> <br>
                     <h4>Information de l'employeur:</h4>
-                    <input type="text" name="nomEmployeur" placeholder="Nom Employeur"> <br>
-                    <input type="text" name="raisonSocial" placeholder="Raison social" ><br>
+                    <input type="text" value="0" name="nomEmployeur" placeholder="Nom Employeur"> <br>
+                    <input type="text" value="0" name="raisonSocial" placeholder="Raison social" ><br>
                 </div>
                 <input type="submit" name="form2" class="button_valider" value="Creer le compte">
         </form>
