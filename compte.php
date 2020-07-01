@@ -118,7 +118,7 @@
                 </div>
                 <div class="hidden compte_epargne">
                 </div>
-                <input type="submit" class="button_valider" value="Creer le compte">
+                <input type="submit" name="form3" class="button_valider" value="Creer le compte">
         </form>
         <p style="color: red;" id="erreur"></p>
     </article>   
