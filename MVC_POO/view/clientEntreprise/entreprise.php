@@ -26,6 +26,4 @@
 </article>
 
 <script type="text/javascript" src="./public/js/fichier.js"></script>
-</body>
-</html>
 

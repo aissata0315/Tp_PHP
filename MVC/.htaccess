@@ -1,9 +1,8 @@
+
 RewriteEngine On
 
-RewriteRule ^accueil$ accueil.php
-RewriteRule ^.{0}$ index.php
-RewriteRule ^facture$ view/facture/liste.php
-RewriteRule ^reglement$ view/reglement/liste.php
+# Get Into Default Index :Login
+#RewriteRule ^$ accueil.php
 
-RewriteRule ^factureController$ controller/factureController.php
-RewriteRule ^reglementController$ controller/reglementController.php
+RewriteRule ^moral$ view/ClientMoral/index.php
+RewriteRule ^moralController$ src/controller/ClientMoralController.php

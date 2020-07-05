@@ -38,7 +38,7 @@ catch (Exception $e)
 } 
 if(isset($_POST)){
 
-$req = $bdd->prepare('INSERT INTO client_entreprise (nom, ninea,resistre_commerce) VALUES(:nom, :ninea, :resistre_commerce)');
+$req = $bdd->prepare('INSERT INTO client_entreprise (nom, ninea,resistre_commerce) VALUES(?, ?, :resistre_commerce)');
 $req->execute
     (array(
         $_POST['nom'],
