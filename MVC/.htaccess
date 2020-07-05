@@ -1,8 +1,0 @@
-
-RewriteEngine On
-
-# Get Into Default Index :Login
-#RewriteRule ^$ accueil.php
-
-RewriteRule ^moral$ view/ClientMoral/index.php
-RewriteRule ^moralController$ src/controller/ClientMoralController.php
