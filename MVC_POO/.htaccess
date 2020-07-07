@@ -1,10 +1,7 @@
 
 RewriteEngine On
 
-# Get Into Default Index :Login
-RewriteRule ^$ view/clientEntreprise/entreprise.php
 
-#RewriteRule ^entreprise$ view/clientEntreprise/entreprise.php
-#RewriteRule ^entreprise$ view/clientEntreprise/entrepriseController.php
 RewriteRule ^entreprise$ ./controller/entrepriseController.php
 RewriteRule ^personne$ ./controller/personneController.php
+RewriteRule ^compte$ ./controller/compteController.php

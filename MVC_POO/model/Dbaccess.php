@@ -15,6 +15,7 @@ class Dbaccess
         catch(PDOException $ex){
             die('Error :'.$ex->getMessage());
         }
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $db;
     }
 
