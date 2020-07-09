@@ -1,7 +1,5 @@
 <?php 
-//se connecter
-  $idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
-  mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
+include 'Connexion.php';
   $query = "SELECT id_client from client_physique";
   $resultat= mysqli_query($idCon, $query) or die("erreur requete: ".mysqli_error($idCon));
   //var_dump($resultat);

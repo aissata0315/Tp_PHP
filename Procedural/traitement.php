@@ -1,13 +1,9 @@
 <?php 
+include 'Connexion.php';
 //var_dump($_POST);
 //var_dump(isset($_POST)); // verifier que la variable est defini
 if(!empty($_POST['form3'])){  
 
-    $idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
-    //choisir une bdd parmi les bdd du serveur de bdd
-    mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
-    
-    
     //request insertion client entreprise
     $requete2 = 
     "  INSERT INTO client_entreprise VALUES
@@ -26,11 +22,6 @@ if(!empty($_POST['form3'])){
 }
 
 if(!empty($_POST['form2'])){  
-
-    $idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
-    //choisir une bdd parmi les bdd du serveur de bdd
-    mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
-    
     
     //request insertion client physique
     $requete3 = 

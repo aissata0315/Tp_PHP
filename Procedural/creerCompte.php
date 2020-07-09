@@ -1,14 +1,8 @@
 <?php
-    //se connecter a la base de donnée
-    $idCon = mysqli_connect('localhost','aissata', "aissata")or die("impossible de se connecter!");
-    //choisir une bdd parmi les bdd du serveur de bdd
-    mysqli_select_db($idCon, 'BanquePopulaire') or die("impossible de choisir une bbd");
-
+include 'Connexion.php';
+    
     if(!empty($_POST['form2'])){
         var_dump($_POST);
-
-       
-        //requete creer compte
 
         $requete = 
         " INSERT INTO comptes values
