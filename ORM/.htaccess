@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^entreprise$ ./src/controller/entrepriseController.php
+RewriteRule ^personne$ ./src/controller/personneController.php
+RewriteRule ^compte$ ./src/controller/compteController.php
