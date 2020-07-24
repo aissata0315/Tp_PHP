@@ -15,8 +15,8 @@ class Compte
     private $id;
     /** @ORM\Column(type="string")**/
     private $typeCompte;
-    /** @ORM\Column(type="integer")**/
-    private $idEntreprise;
+    // /** @ORM\Column(type="integer")**/
+    // private $idEntreprise;
     /**
      * @ORM\ManyToOne(targetEntity="Personne", inversedBy="comptes")
      * @ORM\JoinColumn(name="idPersonne", referencedColumnName="id")

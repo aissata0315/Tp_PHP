@@ -1,24 +1,19 @@
 <?php
-require_once '../../config/autoload.php';
-use model\Compte;
-if (!empty($_POST)){
-    //var_dump($_POST); die();
-    $compte = new Compte();
-    if (isset($_POST['compteParticulier'])){
-        $compte->setIdClient($_POST['id_client']);
-        $compte->setIdEntreprise(null);
-    } else {
-        $compte->setIdEntreprise($_POST['id_entreprise']);
-        $compte->setIdClient(null);
-    }
-    $compte->setTypeCompte($_POST['typeCompte']);
-    $compte->setDateOuverture($_POST['dateOuverture']);
-    $compte->setDateDeblocage($_POST['dateFin']);
 
-    $enregistrement = $compte->creerCompte();
+require_once '/home/aissata/TP/PHP/ORM/bootstrap.php';
+include '/home/aissata/TP/PHP/ORM/src/entities/Compte.php';
+
+$compte = new Compte();
+$compte->setTypeCompte('Bloque');
+//$compte->setIdPersonne();
+//$compte->setDateOuverture(0);
+//$compte->setDateDeblocage(0);
 
 
-}
+
+$entityManager->persist($compte);
+$entityManager->flush();
+
+
+
 include '../view/Compte/compte.php';
-
-
