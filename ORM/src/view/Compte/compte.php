@@ -27,7 +27,7 @@
         foreach ($personnes as $personne) {
         
   ?>
-    <option value=" <?php echo sprintf("-%s\n", $personne->getId()); ?>"><?php echo sprintf("-%s\n", $personne->getId()); ?> </option>
+    <option value=" <?php echo sprintf( $personne->getId()); ?>"><?php echo sprintf( $personne->getNom()); ?> </option>
     <?php  }   ?>                      
     </select> <br>
 
