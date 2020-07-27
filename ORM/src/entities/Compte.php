@@ -22,10 +22,10 @@ class Compte
      * @ORM\JoinColumn(name="idPersonne", referencedColumnName="id")
      */
     private $idPersonne;
-    /** @ORM\Column(type="date")**/
-    private $dateOuverture;
-    /** @ORM\Column(type="date")**/
-    private $dateDeblocage;
+    // /** @ORM\Column(type="date") nullable = true**/
+    // private $dateOuverture;
+    // /** @ORM\Column(type="date") nullable = true**/
+    // private $dateDeblocage;
 
    
     public function __construct()
@@ -77,37 +77,37 @@ class Compte
         $this->idPersonne = $idPersonne;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDateOuverture()
-    {
-        return $this->dateOuverture;
-    }
+    // /**
+    //  * @return mixed
+    //  */
+    // public function getDateOuverture()
+    // {
+    //     return $this->dateOuverture;
+    // }
 
-    /**
-     * @param mixed $dateOuverture
-     */
-    public function setDateOuverture($dateOuverture)
-    {
-        $this->dateOuverture = $dateOuverture;
-    }
+    // /**
+    //  * @param mixed $dateOuverture
+    //  */
+    // public function setDateOuverture($dateOuverture)
+    // {
+    //     $this->dateOuverture = $dateOuverture;
+    // }
 
-    /**
-     * @return mixed
-     */
-    public function getDateDeblocage()
-    {
-        return $this->dateDeblocage;
-    }
+    // /**
+    //  * @return mixed
+    //  */
+    // public function getDateDeblocage()
+    // {
+    //     return $this->dateDeblocage;
+    // }
 
-    /**
-     * param mixed $dateDeblocage
-     */
-    public function setDateDeblocage($dateDeblocage)
-    {
-        $this->dateDeblocage = $dateDeblocage;
-    }
+    // /**
+    //  * param mixed $dateDeblocage
+    //  */
+    // public function setDateDeblocage($dateDeblocage)
+    // {
+    //     $this->dateDeblocage = $dateDeblocage;
+    // }
 
     
 

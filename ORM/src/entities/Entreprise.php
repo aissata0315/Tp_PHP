@@ -1,9 +1,20 @@
 <?php
-class Entreprise
-{
+use Doctrine\ORM\Annotation ;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
+/**
+ * @ORM\Entity @ORM\Table(name="entreprise")
+ **/
+class Entreprise
+{   
+    /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue**/
+    private $id;
+    /** @ORM\Column(type="string")**/
     private $nom;
+     /** @ORM\Column(type="string")**/
     private $ninea;
+    /** @ORM\Column(type="string")**/
     private $registre;
 
     

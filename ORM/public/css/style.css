@@ -95,6 +95,14 @@ nav li {
     display: flex;
 
 }
+.Personne input[type=text], input[type=email]{
+    margin-bottom: 5px;
+    padding: 7px;
+    display: block;
+    border-radius: 5px;
+    width: 900px;
+
+}
 
 
 
