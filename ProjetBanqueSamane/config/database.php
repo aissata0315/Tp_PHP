@@ -15,12 +15,12 @@ $choix = "ORM";
 /** 
  * Turn to on or off your database
  */
-$etat = 'off'; //on or off
+$etat = 'on'; //on or off
 
 $orm = array(
-              'dbname' => 'samanemvcorm_test',//change your database name
-              'user'     => 'root',
-              'password' => '',
+              'dbname' => 'BanqueSamane',//change your database name
+              'user'     => 'aissata',
+              'password' => 'aissata',
               'host' => '127.0.0.1',
               'driver' => 'pdo_mysql',
 );

@@ -8,6 +8,8 @@ POUR TOUTE MODIFICATION VISANT A L'AMELIORER.
 VOUS ETES LIBRE DE TOUTE UTILISATION.
 ===================================================*/
 use libs\system\Controller;
+use src\model\PersonneRepository;
+
 class WelcomeController extends Controller{
 
     public function __construct(){
@@ -16,8 +18,11 @@ class WelcomeController extends Controller{
     /** 
      * use: localhost/projectName/Welcome/
      */
-    public function index(){  
-        return $this->view->load("welcome/index");   
-    }  
+    public function index(){
+        $personnedb = new PersonneRepository();
+
+        $data["listePersonne"] = $personnedb->getAll();
+        return $this->view->load("welcome/index",$data);
+    }
 }
 ?>

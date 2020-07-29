@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <!-- l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  -->
+    <link type="text/css" rel="stylesheet" href="{$url_base}public/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="{$url_base}public/css/samane.css"/>
+    <style>
+        h1{
+            color: #40007d;
+        }
+    </style>
+</head>
+<body>
+<div class="nav navbar navbar-default navbar-fixed-top">
+    <ul class="nav navbar-nav">
+        <!-- l'appel de {$url_base} vous permet de recupérer le chemin de votre site web  -->
+        <li><a href="{$url_base}">Accueil</a></li>
+        <li><a href="{$url_base}Personne/add">Ajouter client </a></li>
+        <li><a href="{$url_base}Compte/add">Creer compte </a></li>
+    </ul>
+</div>
+<div class="col-md-8 col-xs-12 col-md-offset-2" style="margin-top:150px;">
+    <div class="panel panel-info">
+        <div class="panel-heading">Formulaire ajout client</div>
+        <div class="panel-body">
+            {if isset($ok)}
+            {if $ok != 0}
+            <div class="alert alert-success">Données ajoutées!</div>
+            {else}
+            <div class="alert alert-danger">Erreur!</div>
+            {/if}
+            {/if}
+            <form method="post" action="{$url_base}Personne/add">
+                <div class="form-group">
+                    <label class="control-label">Nom</label>
+                    <input class="form-control" type="text" name="nom" id="nom"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Prenom</label>
+                    <input class="form-control" type="text" name="prenom" id="prenom"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Adresse</label>
+                    <input class="form-control" type="text" name="adresse" id="adresse"/>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Email</label>
+                    <input class="form-control" type="text" name="email" id="email"/>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-success" type="submit" name="valider" value="Envoyer"/>
+                    <input class="btn btn-danger" type="reset" name="annuler" value="Annuler"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
