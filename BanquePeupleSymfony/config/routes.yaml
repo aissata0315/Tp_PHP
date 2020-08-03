@@ -1,0 +1,16 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+addperson:
+    path: /addperson
+    controller: App\Controller\PersonneController::addperson
+success:
+    path: /success
+    controller: App\Controller\PersonneController::success
+
+addentreprise:
+    path: /addentreprise
+    controller: App\Controller\EntrepriseController::addentreprise
+
+
