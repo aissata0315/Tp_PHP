@@ -1,6 +1,6 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+accueil:
+    path: /
+    controller: App\Controller\AccueilController::index
 
 addperson:
     path: /addperson
@@ -13,4 +13,7 @@ addentreprise:
     path: /addentreprise
     controller: App\Controller\EntrepriseController::addentreprise
 
+creerCompte:
+    path: /creerCompte
+    controller: App\Controller\CompteController::creercompte
 

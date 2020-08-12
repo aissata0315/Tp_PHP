@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-07-28 11:50:11
+/* Smarty version 3.1.30, created on 2020-07-29 10:13:37
   from "/home/aissata/TP/PHP/ProjetBanqueSamane/src/view/compte/add.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f2010f3debcd0_13228595',
+  'unifunc' => 'content_5f214bd1eae8c3_75726829',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '911feefe3ad6d8d0d4b12daa644afbf313ec9ee5' => 
     array (
       0 => '/home/aissata/TP/PHP/ProjetBanqueSamane/src/view/compte/add.html',
-      1 => 1595937008,
+      1 => 1596017610,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f2010f3debcd0_13228595 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f214bd1eae8c3_75726829 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 <head>

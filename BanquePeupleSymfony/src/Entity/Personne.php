@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PersonneRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,6 +58,16 @@ class Personne
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $employeur;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Compte::class, mappedBy="idPersonne")
+     */
+    private $comptes;
+
+    public function __construct()
+    {
+        $this->comptes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -157,4 +169,37 @@ class Personne
 
         return $this;
     }
+
+    /**
+     * @return Collection|Compte[]
+     */
+    public function getComptes(): Collection
+    {
+        return $this->comptes;
+    }
+
+    public function addCompte(Compte $compte): self
+    {
+        if (!$this->comptes->contains($compte)) {
+            $this->comptes[] = $compte;
+            $compte->setIdPersonne($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompte(Compte $compte): self
+    {
+        if ($this->comptes->contains($compte)) {
+            $this->comptes->removeElement($compte);
+            // set the owning side to null (unless already changed)
+            if ($compte->getIdPersonne() === $this) {
+                $compte->setIdPersonne(null);
+            }
+        }
+
+        return $this;
+    }
+
+   
 }

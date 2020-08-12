@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
-       
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">       
 
     <title>Gestion clients</title>
 </head>
@@ -12,17 +12,17 @@
 <header>
     <img src="{{asset('/images/bplogo.png')}}" alt="" id="logo">
     
-    <h1>Banque Du Pleuple</h1>
-    <img src="{{asset('/images/TT.png')}}" alt="" id="responsableCompte">
+    <h2>Banque Du Pleuple</h2>
+   {# <img src="{{asset('/images/TT.png')}}" alt="" id="responsableCompte">#}
 </header>
-<h5 id="TT">T.THIAM</h5>
+
 <nav>
     <ul>
-        <li>Accueil</li>
-        <li>Listes des clients</li>
-        <li>Ajouter clients</li>
-        <li>Virement</li>
-        <li>Assistance</li>
+        <li><a href="{{ path('accueil') }}"> Accueil </a></li>
+        <li> <a href="{{ path('addperson') }}"> Ajouter Particulier </a> </li>
+        <li><a href="{{ path('addentreprise') }}"> Ajouter Moral </a></li>
+        <li><a href="{{ path('creerCompte') }}"> Creer des compte </a></li>
+        <li>Liste Compte</li>
     </ul>
 </nav>
 {% block contenu %}{% endblock %}

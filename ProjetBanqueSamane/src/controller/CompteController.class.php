@@ -1,6 +1,7 @@
 <?php
 use libs\system\Controller;
 use src\model\CompteRepository;
+use src\model\PersonneRepository;
 
 class CompteController extends Controller
 {
@@ -27,13 +28,13 @@ class CompteController extends Controller
             $data['ok'] = 0;
             if (!empty($typeCompte) && !empty($propietaire)) {
 
-                $compteObject = new Personne();
+                $compteObject = new Compte();
+                $compteObject->setType(addslashes($typeCompte));
+                $personnedb = new PersonneRepository();
+                $personneid = $personnedb->getAll();
 
-                $compteObject->setNom(addslashes($typeCompte));
-                $compteObject->setPrenom(addslashes($propietaire));
-               ;
-
-                $ok = $tdb->addPersonne($compteObject);
+                $compteObject->setProprietaire(addslashes($personneid));
+                $ok = $tdb->addCompte($compteObject);
                 $data['ok'] = $ok;
             }
             return $this->view->load("compte/add", $data);
