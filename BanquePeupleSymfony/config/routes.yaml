@@ -17,3 +17,7 @@ creerCompte:
     path: /creerCompte
     controller: App\Controller\CompteController::creercompte
 
+listerCompte:
+    path: /ListerCompte
+    controller: App\Controller\CompteController::Listercompte
+

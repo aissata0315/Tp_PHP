@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+    <h2>Liste des Comptes</h2>
+    {% for compte in comptes %}
+        <h3>{{ compte.numero }}</h3>
+        <div>{{ compte.typeCompte }}</div>
+
+    {% endfor %}
+
+{% endblock %}
+

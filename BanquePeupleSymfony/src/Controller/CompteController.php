@@ -77,4 +77,14 @@ class CompteController extends AbstractController
             'formulaire' => $form->createView(),
         ]);
     }
+
+
+    public function listerCompte(){
+
+        $comptes = $this->getDoctrine()->getRepository(Compte::class)->findAll();
+
+        return $this->render('compte/liste.html.twig', [
+            'comptes' => $comptes,
+        ]);
+    }
 }
