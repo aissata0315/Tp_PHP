@@ -17,7 +17,7 @@
 
 <nav>
     <ul>
-        <li><a href="/accueil"> Accueil </a></li>
+        <li><a href="/home"> Accueil </a></li>
         <li> <a href="/addperson"> Ajouter Particulier </a> </li>
         <li><a href="/addentreprise"> Ajouter Moral </a></li>
         <li><a href="/addcompte"> Creer des compte </a></li>

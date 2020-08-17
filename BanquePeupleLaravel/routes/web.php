@@ -21,5 +21,6 @@ Route::get('/addperson','PersonneController@add');
 Route::post('/ajout','PersonneController@ajouterClient');
 Route::get('/addentreprise','EntrepriseController@add');
 Route::post('/ajoutmoral','EntrepriseController@moral');
+Route::post('/ajoutCompte','CompteController@creerCompte');
 Route::get('/addcompte','CompteController@add');
 Route::get('/listecompte','CompteController@lister');

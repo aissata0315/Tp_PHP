@@ -12,7 +12,7 @@
             <label for="prenom">ninea</label>
             <input type="text" class="form-control" id="ninea" name="ninea" placeholder="Ninea  de l'entreprise">
 
-        <div class="form-group">
+       <div class="form-group">
             <label for="prenom">registre</label>
             <input type="text" class="form-control" id="registre" name="registre" placeholder="Registre de l'entreprise">
         </div>
