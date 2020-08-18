@@ -55,5 +55,5 @@
     <p style="color: red;" id="erreur"></p>
 </article>
 
-<script type="text/javascript" src="./public/js/fichier.js"></script>
+<script type="text/javascript" src="../public/js/fichier.js"></script>
 

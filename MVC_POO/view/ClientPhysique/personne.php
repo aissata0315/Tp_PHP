@@ -52,4 +52,4 @@
         <input type="submit" name="form2" class="button_valider" value="Creer le compte">
     </form>
 </article>
-<script type="text/javascript" src="./public/js/fichier.js"></script>
+<script type="text/javascript" src="../public/js/fichier.js"></script>
