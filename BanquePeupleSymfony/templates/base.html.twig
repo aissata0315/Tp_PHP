@@ -18,11 +18,18 @@
 
 <nav>
     <ul>
+
+        {% if not app.user %}
         <li><a href="{{ path('accueil') }}"> Accueil </a></li>
+        <li><a href="{{ path('security_login') }}"> Connexion </a></li>
+        {% else %}
         <li> <a href="{{ path('addperson') }}"> Ajouter Particulier </a> </li>
         <li><a href="{{ path('addentreprise') }}"> Ajouter Moral </a></li>
         <li><a href="{{ path('creerCompte') }}"> Creer des compte </a></li>
         <li><a href="{{ path('listerCompte') }}"> Liste des comptes </a></li>
+        <li> <a href="{{ path('security_logout') }}"> Deconnexion </a> </li>
+        {% endif %}
     </ul>
 </nav>
 {% block contenu %}{% endblock %}
+</body>
