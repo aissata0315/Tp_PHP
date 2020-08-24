@@ -43,7 +43,7 @@ class User implements UserInterface
      */
     private $password;
 
-    public $confirm_password;
+
 
     public function getId(): ?int
     {

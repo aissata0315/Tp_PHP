@@ -1,12 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block contenu %}
-    <h2>Liste des Comptes</h2>
-    {% for compte in comptes %}
-        <h3>{{ compte.numero }}</h3>
-        <div>{{ compte.typeCompte }}</div>
+    <h1>Liste des Comptes</h1>
+    <table  class="table table-striped">
+        <tr>
+            <th>Numero de compte</th>
+            <th>Proprietaire</th>
+            <th>Type de compte</th>
+            <th>Date Ouverture</th>
 
-    {% endfor %}
+            <th>Actions</th>
+
+        </tr>
+        {% for compte in comptes %}
+            <tr>
+                <td>{{ compte.numero }}</td>
+                <td>{{ compte.idPersonne.nom}}</td>
+                <td>{{ compte.typeCompte }}</td>
+                <td>{{ compte.date | date("m/d/Y") }}</td>
+
+                <td>
+                    <a href="{{ path('modification',{'identifiant':compte.Id})}}">Modifier</a> <br>
+                    <a href="{{ path('suppression',{'identifiant':compte.Id})}}">Supprimer</a>
+                </td>
+
+
+            </tr>
+        {% endfor %}
+
+    </table>
+
 
 {% endblock %}
 

@@ -27,7 +27,7 @@ class CompteController extends AbstractController
         $form = $this->createFormBuilder($compte)->getForm();
         $form->add('numero', TextType::class);
         $form->add('typeCompte', ChoiceType::class, [
-            'choices'  => [
+            'choices' => [
                 'choisir le type de compte' => 'choisir le type de compte',
                 'Courant' => 'CC',
                 'Epargne' => 'CE',
@@ -79,12 +79,71 @@ class CompteController extends AbstractController
     }
 
 
-    public function listerCompte(){
+    public function listerCompte()
+    {
+
 
         $comptes = $this->getDoctrine()->getRepository(Compte::class)->findAll();
 
-        return $this->render('compte/liste.html.twig', [
-            'comptes' => $comptes,
+        return $this->render('compte/liste.html.twig', array("comptes" => $comptes)
+        );
+    }
+
+
+    public function modification(Request $request, $identifiant)
+    {
+        //var_dump($identifiant);
+        $compte = $this->getDoctrine()->getRepository(Compte::class)->find($identifiant);
+        $form = $this->createFormBuilder($compte);
+        $form = $form->getForm();
+        $form->add('numero', TextType::class);
+        $form->add('typeCompte', ChoiceType::class, [
+            'choices' => [
+                'choisir le type de compte' => 'choisir le type de compte',
+                'Courant' => 'CC',
+                'Epargne' => 'CE',
+                'Bloqué' => 'CB',
+            ],
         ]);
+        $form->add('date', DateType::class);
+        $personnes = $this->getDoctrine()->getRepository(Personne::class)->findAll();
+        $choices = array();
+        foreach ($personnes as $personne) {
+            $choices[$personne->getPrenom()] = $personne->getId();
+        }
+        $form->add('idPersonne', ChoiceType::class, [
+
+                'choices' => $choices,
+                'mapped' => false
+            ]
+        );
+        $form->add('Enregistrer', SubmitType::class, ['label' => "Creer Compte"]);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $compte = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $idpersonne = $request->request->all()['form']['idPersonne'];
+            $personnechoisie = $this->getDoctrine()->getRepository(Personne::class)->find($idpersonne);
+            $compte->setIdPersonne($personnechoisie);
+            $entityManager->persist($compte);
+            $entityManager->flush();
+            return $this->redirectToRoute('listerCompte');
+
+        }
+        return $this->render('compte/add.html.twig', [
+            'formulaire' => $form->createView(),
+        ]);
+
+    }
+
+    public function supprimer($identifiant)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $compte = $entityManager->getRepository(Compte::class)->find($identifiant);
+        $entityManager->remove($compte);
+        $entityManager->flush();
+        return $this->redirectToRoute('listerCompte');
+
     }
 }

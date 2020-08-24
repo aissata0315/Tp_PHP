@@ -21,3 +21,10 @@ listerCompte:
     path: /ListerCompte
     controller: App\Controller\CompteController::Listercompte
 
+modification:
+    path: /modifier/{identifiant}
+    controller: App\Controller\CompteController::modification
+
+suppression:
+    path: /supprimer/{identifiant}
+    controller: App\Controller\CompteController::supprimer
