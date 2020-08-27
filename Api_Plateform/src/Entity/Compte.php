@@ -5,9 +5,12 @@ namespace App\Entity;
 use App\Repository\CompteRepository;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use ApiPlatform\Core\Annotation\ApiFilter;
+use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 /**
- *  @ApiResource()
+ * @ApiResource()
  * @ORM\Entity(repositoryClass=CompteRepository::class)
+ * @ApiFilter(SearchFilter::class, properties={"numero" : "exact"})
  *
  */
 class Compte

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6441a618-001b-41a9-aad1-ecac57a60996" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ListeEtudiants" beforeDir="false" afterPath="$PROJECT_DIR$/../ListeEtudiants" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanquePeupleSymfony/.idea/BanquePeupleSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../BanquePeupleSymfony/.idea/BanquePeupleSymfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BanquePeupleSymfony/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BanquePeupleSymfony/.idea/php.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +164,7 @@
       <workItem from="1598261784185" duration="1767000" />
       <workItem from="1598359863088" duration="735000" />
       <workItem from="1598364676500" duration="1214000" />
+      <workItem from="1598529982653" duration="609000" />
     </task>
     <servers />
   </component>
