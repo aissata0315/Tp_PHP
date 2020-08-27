@@ -1,0 +1,30 @@
+accueil:
+    path: /
+    controller: App\Controller\AccueilController::index
+
+addperson:
+    path: /addperson
+    controller: App\Controller\PersonneController::addperson
+success:
+    path: /success
+    controller: App\Controller\PersonneController::success
+
+addentreprise:
+    path: /addentreprise
+    controller: App\Controller\EntrepriseController::addentreprise
+
+creerCompte:
+    path: /creerCompte
+    controller: App\Controller\CompteController::creercompte
+
+listerCompte:
+    path: /ListerCompte
+    controller: App\Controller\CompteController::Listercompte
+
+modification:
+    path: /modifier/{identifiant}
+    controller: App\Controller\CompteController::modification
+
+suppression:
+    path: /supprimer/{identifiant}
+    controller: App\Controller\CompteController::supprimer

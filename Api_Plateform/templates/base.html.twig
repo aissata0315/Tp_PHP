@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">       
+
+    <title>Gestion clients</title>
+</head>
+<body>
+<header>
+    <img src="{{asset('/images/bplogo.png')}}" alt="" id="logo">
+    
+    <h2>Banque Du Pleuple</h2>
+   {# <img src="{{asset('/images/TT.png')}}" alt="" id="responsableCompte">#}
+</header>
+
+<nav>
+    <ul>
+
+        {% if not app.user %}
+        <li><a href="{{ path('accueil') }}"> Accueil </a></li>
+        <li><a href="{{ path('security_login') }}"> Connexion </a></li>
+        <li><a href="{{ path('security_registration') }}">Inscription </a></li>
+        {% else %}
+        <li> <a href="{{ path('addperson') }}"> Ajouter Particulier </a> </li>
+        <li><a href="{{ path('addentreprise') }}"> Ajouter Moral </a></li>
+        <li><a href="{{ path('creerCompte') }}"> Creer des compte </a></li>
+        <li><a href="{{ path('listerCompte') }}"> Liste des comptes </a></li>
+        <li> <a href="{{ path('security_logout') }}"> Deconnexion </a> </li>
+        {% endif %}
+    </ul>
+</nav>
+{% block contenu %}{% endblock %}
+</body>
