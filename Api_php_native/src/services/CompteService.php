@@ -22,6 +22,6 @@ class CompteService
         $solde = $compte[0]->getSolde();
         $type = $compte[0]->getTypeCompte();
 
-        return json_encode(['solde' => $solde, "Type de compte" => $type]);
+        return json_encode(['solde' => $solde, "name" => $type]);
     }
 }
