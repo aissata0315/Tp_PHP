@@ -1,0 +1,140 @@
+body{
+    margin: 0 auto;
+    width: 1024px;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+
+}
+#TT{
+    text-align: right;
+    margin: 0;
+}
+header h1 {
+    margin-right: 255px;
+}
+
+#logo{
+    margin-left: 350px;
+
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+    background-color: #00C3C7;
+
+
+}
+
+header img{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+
+}
+nav li {
+    display: inline;
+
+
+}
+
+.form_choixTypeClient{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* styliser le formulaire client entreprise:
+*/
+.Entreprise input[type=text], .Entreprise input[type=email], .Entreprise input[type=number]{
+
+    margin-bottom: 5px;
+    padding: 7px;
+    display: block;
+    border-radius: 5px;
+    width: 900px;
+}
+.ClientEntreprise{
+    margin: 60px;
+}
+.ClientEntreprise input[type=submit]{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #00C3C7;
+}
+
+/* styliser le formulaire client particulier
+*/
+.Particulier input[type=text], input[type=email], input[type=number], input[type=date] {
+    margin-bottom: 5px;
+    padding: 7px;
+    display: block;
+    border-radius: 5px;
+    width: 900px;
+
+}
+.Particulier input[type=submit]{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #00C3C7;
+
+}
+.Particulier{
+    margin: 60px;;
+}
+.radios{
+    display: flex;
+
+}
+.Personne input[type=text], input[type=email]{
+    margin-bottom: 5px;
+    padding: 7px;
+    display: block;
+    border-radius: 5px;
+    width: 900px;
+
+}
+
+
+
+
+
+
+/*form {
+    background-color:#FAFAFA;
+    padding-top:10px;
+    width:550px;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    }
+article div {
+    padding:10px;
+    margin-bottom:5px;
+}
+input {
+    border:1px solid black;
+    background-color:#A6BEDE;
+    width: 500px;
+    padding: 5px;
+    margin: 5px;
+
+
+
+    }
+   input[type=radio] {
+    margin-right:20px;
+    background-color:transparent;
+    border:none;
+    display: inline;
+
+   }*/

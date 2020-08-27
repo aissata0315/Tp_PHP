@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^entreprise$ ./src/controller/entrepriseController.php
+RewriteRule ^personne$ ./src/controller/personneController.php
+RewriteRule ^compte$ ./src/controller/compteController.php
+
+RewriteRule ^api/compte/([^/]+)/? ./src/controller/api.php?numeroCompte=$1

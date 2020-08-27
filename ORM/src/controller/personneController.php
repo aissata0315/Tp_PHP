@@ -2,6 +2,7 @@
 
 require_once '/home/aissata/TP/PHP/ORM/bootstrap.php';
 include '/home/aissata/TP/PHP/ORM/src/entities/Personne.php';
+
 if (!empty($_POST)){
     //var_dump($_POST);
     //extract($_POST);
@@ -15,11 +16,11 @@ if (!empty($_POST)){
     $personne->setProfession($_POST['profession']);
     $personne->setSalaire($_POST['salaire']);
     $personne->setNomEmployeur($_POST['employeur']);
-    
+
 
     $entityManager->persist($personne);
     $entityManager->flush();
-    
+
 
 
 }

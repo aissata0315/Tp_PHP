@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6441a618-001b-41a9-aad1-ecac57a60996" name="Default Changelist" comment="" />
+    <list default="true" id="6441a618-001b-41a9-aad1-ecac57a60996" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ListeEtudiants" beforeDir="false" afterPath="$PROJECT_DIR$/../ListeEtudiants" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +138,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodeIgniterBP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ListeEtudiants" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -158,6 +161,9 @@
       <workItem from="1597400002996" duration="3523000" />
       <workItem from="1597421016644" duration="1549000" />
       <workItem from="1597655548875" duration="8812000" />
+      <workItem from="1598261784185" duration="1767000" />
+      <workItem from="1598359863088" duration="735000" />
+      <workItem from="1598364676500" duration="1214000" />
     </task>
     <servers />
   </component>
@@ -177,10 +183,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="255" y="27" width="912" height="741" key="CommitChangelistDialog2/67.27.1299.741@67.27.1299.741" timestamp="1597334356584" />
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1597667754988">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1598267893525">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1597667754988" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1598267893525" />
     <state x="311" y="132" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1597334365290">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
